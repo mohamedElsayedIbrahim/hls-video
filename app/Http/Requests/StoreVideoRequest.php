@@ -25,5 +25,7 @@ class StoreVideoRequest extends FormRequest
             'title' => 'required',
             'video' => 'required|file|mimetypes:video/mp4,video/mpeg,video/x-matroska',
         ];
+
+        //https://github.com/protonemedia/laravel-ffmpeg?tab=readme-ov-file#encrypted-hls
     }
 }
