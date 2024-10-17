@@ -11,7 +11,7 @@ class StoreVideoRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,7 +23,7 @@ class StoreVideoRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'video' => 'required|file|mimetypes:video/mp4,video/mpeg,video/x-matroska',
+            'video' => 'required|file|mimetypes:video/mp4,video/mpeg,video/x-matroska,video/avi,video/quicktime',
         ];
 
         //https://github.com/protonemedia/laravel-ffmpeg?tab=readme-ov-file#encrypted-hls
